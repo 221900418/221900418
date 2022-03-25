@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>冰壶混双循环赛第1轮</title>
+    <link rel="stylesheet" href="src/index.css" />
+    <script src="src/vue.global.js"></script>
+    <script src="src/index.full.js"></script>
+</head>
+<body>
+<div id="daohan">
+    <img src="src/img/tou.png" style="margin:0 auto;width:100%">
+    <el-row style="background-color: #b5dfff">
+        <el-col :span="4"></el-col>
+        <el-col :span="4" style="text-align:center"><el-button size="large" type="primary" plain><a href="index.html">冬奥知识</a></el-col>
+        <el-col :span="4" style="text-align:center"><el-button size="large" type="primary" plain><a href="奖牌总榜.html">奖牌总榜</a></el-col>
+        <el-col :span="4" style="text-align:center"><el-button size="large" type="primary" plain><a href="每日赛程.html">每日赛程</a></el-col>
+        <el-col :span="4" style="text-align:center"><el-button size="large" type="primary" plain><a href="奖牌地图.html">奖牌地图</a></el-col>
+        <el-col :span="4"></el-col>
+    </el-row>
+    <el-row>
+        <el-col :span="8" style="text-align:center"><el-button size="large" type="primary" plain><a href="单板滑雪男子坡面障碍技巧决赛.html">详细赛程案例-单板滑雪男子坡面障碍技巧决赛</a></el-col>
+        <el-col :span="8" style="text-align:center"><el-button size="large" type="primary" plain><a href="冰壶混双循环赛第1轮.html">详细赛程案例-冰壶混双循环赛第1轮</a></el-col>
+        <el-col :span="8" style="text-align:center"><el-button size="large" type="primary" plain><a href="速度滑冰女子3000米.html">详细赛程案例-速度滑冰女子3000米</a></el-col>
+    </el-row>
+</div>
+<div id="biaoge" style="margin:0 auto; width:80%;">
+    <p style="text-align: center;font-size: 30px">冰壶混双循环赛第1轮</p>
+    <el-table  :data="items" border style="width: 100%" >
+        <el-table-column prop="country" label="国家" width="80" ></el-table-column>
+        <el-table-column prop="attend1" label="参赛人员" width="180"></el-table-column>
+        <el-table-column prop="attend2" label="参赛人员" width="180" ></el-table-column>
+        <el-table-column prop="r1" label="1" ></el-table-column>
+        <el-table-column prop="r2" label="2" ></el-table-column>
+        <el-table-column prop="r3" label="3" ></el-table-column>
+        <el-table-column prop="r4" label="4" ></el-table-column>
+        <el-table-column prop="r5" label="5" ></el-table-column>
+        <el-table-column prop="r6" label="6" ></el-table-column>
+        <el-table-column prop="r7" label="7" ></el-table-column>
+        <el-table-column prop="r8" label="8" ></el-table-column>
+        <el-table-column prop="count" label="总计" ></el-table-column>
+    </el-table>
+</div>
+</body>
+<script >
+    Vue.createApp({}).use(ElementPlus).mount('#daohan')
+    Vue.createApp({
+        data() {
+            return {
+                items:[
+                    {
+                        "country": "SWE",
+                        "attend1": "阿尔米达·德瓦尔",
+                        "attend2": "奥斯卡·埃里克松",
+                        "r1": "0",
+                        "r2": "2",
+                        "r3": "0",
+                        "r4": "1",
+                        "r5": "2",
+                        "r6": "0",
+                        "r7": "0",
+                        "r8": "0",
+                        "count": "5"
+                    },
+                    {
+                        "country": "GBR",
+                        "attend1": "珍妮弗·多兹",
+                        "attend2": "布鲁斯·莫阿特",
+                        "r1": "1",
+                        "r2": "0",
+                        "r3": "3",
+                        "r4": "0",
+                        "r5": "0",
+                        "r6": "1",
+                        "r7": "3",
+                        "r8": "1",
+                        "count": "9"
+                    },
+                ]
+            }
+        }
+    }).use(ElementPlus).mount('#biaoge')
+</script>
+</html>

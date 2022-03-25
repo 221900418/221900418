@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>奖牌总榜</title>
+    <link rel="stylesheet" href="src/index.css" />
+    <script src="src/vue.global.js"></script>
+    <script src="src/index.full.js"></script>
+</head>
+<body>
+<div id="jpzb">
+    <img src="src/img/tou.png" style="margin:0 auto;width:100%">
+    <el-row style="background-color: #b5dfff">
+        <el-col :span="4"></el-col>
+        <el-col :span="4" style="text-align:center"><el-button size="large" type="primary" plain><a href="index.html">冬奥知识</a> </el-col>
+        <el-col :span="4" style="text-align:center"><el-button size="large" type="primary" plain><a href="奖牌总榜.html">奖牌总榜</a></el-col>
+        <el-col :span="4" style="text-align:center"><el-button size="large" type="primary" plain><a href="每日赛程.html">每日赛程</a> </el-col>
+        <el-col :span="4" style="text-align:center"><el-button size="large" type="primary" plain><a href="奖牌地图.html">奖牌地图</a> </el-col>
+        <el-col :span="4"></el-col>
+    </el-row>
+<div style="margin:0 auto; width:90%;">
+<el-table  :data="items" border stripe style="width: 100%" :row-class-name="tableRowClassName" >
+    <el-table-column prop="rank" label="名次" width="180" ></el-table-column>
+    <el-table-column prop="countryname" label="国家名称" ></el-table-column>
+    <el-table-column prop="gold">
+        <template #header>
+            <img src="src/img/1.png" width="50" height="50">
+        </template>
+    </el-table-column>
+    <el-table-column prop="silver">
+        <template #header>
+            <img src="src/img/2.png" width="50" height="50">
+        </template>
+    </el-table-column>
+    <el-table-column prop="bronze">
+        <template #header>
+            <img src="src/img/3.png" width="50" height="50">
+        </template>
+    </el-table-column>
+    <el-table-column prop="count" label="总计" ></el-table-column>
+</el-table></div>
+</div>
+</body>
+<script >
+    Vue.createApp({
+        methods :{
+            tableRowClassName({row,rowIndex}){
+                if (rowIndex === 2) {
+                    return "success-row"
+                }
+                return 'warning-row'
+            }
+        },
+        data() {
+            return {
+                items:[
+                    {
+                        "bronze": "13",
+                        "rank": "1",
+                        "count": "37",
+                        "silver": "8",
+                        "countryname": "挪威",
+                        "gold": "16",
+                        "countryid": "NOR"
+                    },
+                    {
+                        "bronze": "5",
+                        "rank": "2",
+                        "count": "27",
+                        "silver": "10",
+                        "countryname": "德国",
+                        "gold": "12",
+                        "countryid": "GER"
+                    },
+                    {
+                        "bronze": "2",
+                        "rank": "3",
+                        "count": "15",
+                        "silver": "4",
+                        "countryname": "中国",
+                        "gold": "9",
+                        "countryid": "CHN"
+                    },
+                    {
+                        "bronze": "7",
+                        "rank": "4",
+                        "count": "25",
+                        "silver": "10",
+                        "countryname": "美国",
+                        "gold": "8",
+                        "countryid": "USA"
+                    },
+                    {
+                        "bronze": "5",
+                        "rank": "5",
+                        "count": "18",
+                        "silver": "5",
+                        "countryname": "瑞典",
+                        "gold": "8",
+                        "countryid": "SWE"
+                    },
+                    {
+                        "bronze": "4",
+                        "rank": "6",
+                        "count": "17",
+                        "silver": "5",
+                        "countryname": "荷兰",
+                        "gold": "8",
+                        "countryid": "NED"
+                    },
+                    {
+                        "bronze": "4",
+                        "rank": "7",
+                        "count": "18",
+                        "silver": "7",
+                        "countryname": "奥地利",
+                        "gold": "7",
+                        "countryid": "AUT"
+                    },
+                    {
+                        "bronze": "5",
+                        "rank": "8",
+                        "count": "14",
+                        "silver": "2",
+                        "countryname": "瑞士",
+                        "gold": "7",
+                        "countryid": "SUI"
+                    },
+                    {
+                        "bronze": "14",
+                        "rank": "9",
+                        "count": "32",
+                        "silver": "12",
+                        "countryname": "俄罗斯奥运队",
+                        "gold": "6",
+                        "countryid": "ROC"
+                    },
+                    {
+                        "bronze": "2",
+                        "rank": "10",
+                        "count": "14",
+                        "silver": "7",
+                        "countryname": "法国",
+                        "gold": "5",
+                        "countryid": "FRA"
+                    },
+                    {
+                        "bronze": "14",
+                        "rank": "11",
+                        "count": "26",
+                        "silver": "8",
+                        "countryname": "加拿大",
+                        "gold": "4",
+                        "countryid": "CAN"
+                    },
+                    {
+                        "bronze": "9",
+                        "rank": "12",
+                        "count": "18",
+                        "silver": "6",
+                        "countryname": "日本",
+                        "gold": "3",
+                        "countryid": "JPN"
+                    },
+                    {
+                        "bronze": "8",
+                        "rank": "13",
+                        "count": "17",
+                        "silver": "7",
+                        "countryname": "意大利",
+                        "gold": "2",
+                        "countryid": "ITA"
+                    },
+                    {
+                        "bronze": "2",
+                        "rank": "14",
+                        "count": "9",
+                        "silver": "5",
+                        "countryname": "韩国",
+                        "gold": "2",
+                        "countryid": "KOR"
+                    },
+                    {
+                        "bronze": "2",
+                        "rank": "15",
+                        "count": "7",
+                        "silver": "3",
+                        "countryname": "斯洛文尼亚",
+                        "gold": "2",
+                        "countryid": "SLO"
+                    },
+                    {
+                        "bronze": "4",
+                        "rank": "16",
+                        "count": "8",
+                        "silver": "2",
+                        "countryname": "芬兰",
+                        "gold": "2",
+                        "countryid": "FIN"
+                    },
+                    {
+                        "bronze": "0",
+                        "rank": "17",
+                        "count": "3",
+                        "silver": "1",
+                        "countryname": "新西兰",
+                        "gold": "2",
+                        "countryid": "NZL"
+                    },
+                    {
+                        "bronze": "1",
+                        "rank": "18",
+                        "count": "4",
+                        "silver": "2",
+                        "countryname": "澳大利亚",
+                        "gold": "1",
+                        "countryid": "AUS"
+                    },
+                    {
+                        "bronze": "0",
+                        "rank": "19",
+                        "count": "2",
+                        "silver": "1",
+                        "countryname": "英国",
+                        "gold": "1",
+                        "countryid": "GBR"
+                    },
+                    {
+                        "bronze": "2",
+                        "rank": "20",
+                        "count": "3",
+                        "silver": "0",
+                        "countryname": "匈牙利",
+                        "gold": "1",
+                        "countryid": "HUN"
+                    },
+                    {
+                        "bronze": "1",
+                        "rank": "21",
+                        "count": "2",
+                        "silver": "0",
+                        "countryname": "捷克",
+                        "gold": "1",
+                        "countryid": "CZE"
+                    },
+                    {
+                        "bronze": "1",
+                        "rank": "21",
+                        "count": "2",
+                        "silver": "0",
+                        "countryname": "斯洛伐克",
+                        "gold": "1",
+                        "countryid": "SVK"
+                    },
+                    {
+                        "bronze": "1",
+                        "rank": "21",
+                        "count": "2",
+                        "silver": "0",
+                        "countryname": "比利时",
+                        "gold": "1",
+                        "countryid": "BEL"
+                    },
+                    {
+                        "bronze": "0",
+                        "rank": "24",
+                        "count": "2",
+                        "silver": "2",
+                        "countryname": "白俄罗斯",
+                        "gold": "0",
+                        "countryid": "BLR"
+                    },
+                    {
+                        "bronze": "0",
+                        "rank": "25",
+                        "count": "1",
+                        "silver": "1",
+                        "countryname": "西班牙",
+                        "gold": "0",
+                        "countryid": "ESP"
+                    },
+                    {
+                        "bronze": "0",
+                        "rank": "25",
+                        "count": "1",
+                        "silver": "1",
+                        "countryname": "乌克兰",
+                        "gold": "0",
+                        "countryid": "UKR"
+                    },
+                    {
+                        "bronze": "1",
+                        "rank": "27",
+                        "count": "1",
+                        "silver": "0",
+                        "countryname": "波兰",
+                        "gold": "0",
+                        "countryid": "POL"
+                    },
+                    {
+                        "bronze": "1",
+                        "rank": "27",
+                        "count": "1",
+                        "silver": "0",
+                        "countryname": "拉脱维亚",
+                        "gold": "0",
+                        "countryid": "LAT"
+                    },
+                    {
+                        "bronze": "1",
+                        "rank": "27",
+                        "count": "1",
+                        "silver": "0",
+                        "countryname": "爱沙尼亚",
+                        "gold": "0",
+                        "countryid": "EST"
+                    }
+                ]
+            }
+        }
+    }).use(ElementPlus).mount('#jpzb')
+</script>
+<style>
+    .el-table .success-row {
+        background-color: #ffde57;
+    }
+    .el-table .warning-row {
+        background-color: #d1eefd;
+    }
+</style>
+</html>

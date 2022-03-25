@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>单板滑雪男子坡面障碍技巧决赛</title>
+    <link rel="stylesheet" href="src/index.css" />
+    <script src="src/vue.global.js"></script>
+    <script src="src/index.full.js"></script>
+</head>
+<body>
+<div id="daohan">
+    <img src="src/img/tou.png" style="margin:0 auto;width:100%">
+    <el-row style="background-color: #b5dfff">
+        <el-col :span="4"></el-col>
+        <el-col :span="4" style="text-align:center"><el-button size="large" type="primary" plain><a href="index.html">冬奥知识</a></el-col>
+        <el-col :span="4" style="text-align:center"><el-button size="large" type="primary" plain><a href="奖牌总榜.html">奖牌总榜</a></el-col>
+        <el-col :span="4" style="text-align:center"><el-button size="large" type="primary" plain><a href="每日赛程.html">每日赛程</a></el-col>
+        <el-col :span="4" style="text-align:center"><el-button size="large" type="primary" plain><a href="奖牌地图.html">奖牌地图</a></el-col>
+        <el-col :span="4"></el-col>
+    </el-row>
+    <el-row>
+        <el-col :span="8" style="text-align:center"><el-button size="large" type="primary" plain><a href="单板滑雪男子坡面障碍技巧决赛.html">详细赛程案例-单板滑雪男子坡面障碍技巧决赛</a></el-col>
+        <el-col :span="8" style="text-align:center"><el-button size="large" type="primary" plain><a href="冰壶混双循环赛第1轮.html">详细赛程案例-冰壶混双循环赛第1轮</a></el-col>
+        <el-col :span="8" style="text-align:center"><el-button size="large" type="primary" plain><a href="速度滑冰女子3000米.html">详细赛程案例-速度滑冰女子3000米</a></el-col>
+    </el-row>
+</div>
+<div id="biaoge"  style="margin:0 auto; width:80%;">
+    <p style="text-align: center;font-size: 30px">单板滑雪男子坡面障碍技巧决赛</p>
+    <el-table  :data="items" border style="width: 100%" >
+        <el-table-column prop="rank" label="名次" width="80" ></el-table-column>
+        <el-table-column prop="country" label="国家" width="80" ></el-table-column>
+        <el-table-column prop="attend1" label="参赛人员" width="180"></el-table-column>
+        <el-table-column prop="r1" label="第一轮" ></el-table-column>
+        <el-table-column prop="r2" label="第二轮" ></el-table-column>
+        <el-table-column prop="r3" label="第三轮" ></el-table-column>
+        <el-table-column prop="high" label="最高分" ></el-table-column>
+    </el-table>
+</div>
+</body>
+<script >
+    Vue.createApp({}).use(ElementPlus).mount('#daohan')
+    Vue.createApp({
+        data() {
+            return {
+                items:[
+                    {
+                        "rank": "1",
+                        "country": "CAN",
+                        "attend1": "马克斯·帕罗特",
+                        "r1": "79.86 (3)",
+                        "r2": "90.96 (1)",
+                        "r3": "36.56 (10)",
+                        "high": "90.96"
+                    },
+                    {
+                        "rank": "2",
+                        "country": "CHN",
+                        "attend1": "苏翊鸣",
+                        "r1": "78.38 (4)",
+                        "r2": "88.70 (2)",
+                        "r3": "66.58 (2)",
+                        "high": "88.70"
+                    },
+                    {
+                        "rank": "...",
+                        "country": " ",
+                        "attend1": " ",
+                        "r1": " ",
+                        "r2": " ",
+                        "r3": " ",
+                        "high": " "
+                    },
+                ]
+            }
+        }
+    }).use(ElementPlus).mount('#biaoge')
+</script>
+</html>

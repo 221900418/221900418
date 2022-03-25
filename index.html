@@ -1,335 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>奖牌总榜</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>冬奥知识</title>
     <link rel="stylesheet" href="src/index.css" />
     <script src="src/vue.global.js"></script>
     <script src="src/index.full.js"></script>
+    <link rel="stylesheet" href="src/css/normalize.css">
+    <link rel="stylesheet" href="src/font-awesome-4.7.0/css/font-awesome.min.css">                <!-- Font Awesome -->
+    <link rel="stylesheet" href="src/css/bootstrap.min.css">                                      <!-- Bootstrap style -->
+    <link rel="stylesheet" href="src/css/tooplate-style.css">                                   <!-- Templatemo style -->
 </head>
-<body>
-<div id="jpzb">
-<el-table  :data="items" border stripe style="width: 100%" >
-    <el-table-column prop="rank" label="名次" width="180" ></el-table-column>
-    <el-table-column prop="countryname" label="国家名称" ></el-table-column>
-    <el-table-column prop="gold">
-        <template #header>
-            <img src="src/img/1.png" width="50" height="50">
-        </template>
-    </el-table-column>
-    <el-table-column prop="silver">
-        <template #header>
-            <img src="src/img/2.png" width="95" height="95">
-        </template>
-    </el-table-column>
-    <el-table-column prop="bronze">
-        <template #header>
-            <img src="src/img/3.png" width="95" height="95">
-        </template>
-    </el-table-column>
-    <el-table-column prop="count" label="总计" ></el-table-column>
-</el-table>
-</div>
-<table border="1"  >
-    <tr>
-        <th>名次</th>
-        <th>国家名称</th>
-        <th><img src="src/img/1.png" width="95" height="95"></th>
-        <th><img src="src/img/2.png" width="95" height="95"></th>
-        <th><img src="src/img/3.png" width="95" height="95"></th>
-        <th>总计</th>
-    </tr>
-    <tr v-for="item in items">
-        <th>
-            {{ item.rank }}
-        </th>
-        <th>
-            {{ item.countryname }}
-        </th>
-        <th>
-            {{ item.gold }}
-        </th>
-        <th>
-            {{ item.silver }}
-        </th>
-        <th>
-            {{ item.bronze }}
-        </th>
-        <th>
-            {{ item.count }}
-        </th>
-    </tr>
-</table>
+    <body>
+    <div id="dazs">
+        <img src="src/img/tou.png" style="margin:0 auto;width:100%">
+        <el-row style="background-color: #b5dfff">
+            <el-col :span="4"></el-col>
+            <el-col :span="4" style="text-align:center"><el-button size="large" type="primary" plain><a href="index.html">冬奥知识</a></el-button></el-col>
+            <el-col :span="4" style="text-align:center"><el-button size="large" type="primary" plain><a href="奖牌总榜.html">奖牌总榜</a></el-button></el-button></el-col>
+            <el-col :span="4" style="text-align:center"><el-button size="large" type="primary" plain><a href="每日赛程.html">每日赛程</a></el-button></el-col>
+            <el-col :span="4" style="text-align:center"><el-button size="large" type="primary" plain><a href="奖牌地图.html">奖牌地图</a></el-button></el-col>
+            <el-col :span="4"></el-col>
+        </el-row>
+    </div>
+    <section class="headerBg index-pc-v2 CN">
+        <div id="snowflake" style="display: block;">
+            <div class="snow"></div>
+        </div>
+    </section>
+        <div class="container">
+            <div class="tm-main-content">                    
+                <section class="row tm-item-preview tm-margin-b-xl">
+                    <div class="col-md-6 col-sm-12 mb-md-0 mb-5">         
+                        <div class="mr-lg-5">
+                            <img src="src/img/bdd2.png" width="540" height="810">
+                        </div>                                       
+                    </div>
+                    <div class="col-md-6 col-sm-12 tm-highlight tm-small-pad">
+                        <h2 class="tm-margin-b-p">冰墩墩</h2>
+                        <p class="tm-margin-b-p">“冰”象征纯洁、坚强，是冬奥会的特点。“墩墩”意喻敦厚、敦实、可爱，契合熊猫的整体形象，象征着冬奥会运动员强壮有力的身体、坚韧不拔的意志和鼓舞人心的奥林匹克精神。</p>
+                        <p>冰墩墩熊猫形象与冰晶外壳的结合将文化要素和冰雪运动融合并赋予了新的文化属性和特征，体现了冬季冰雪运动的特点。熊猫是世界公认的中国国宝，形象友好可爱、憨态可掬。这样设计既能代表举办冬奥的中国，又能代表中国味道的冬奥。头部彩色光环灵感源自于北京国家速滑馆——“冰丝带”，线条流动象征着冰雪运动的赛道和5G高科技。头部外壳造型取自冰雪运动头盔。熊猫整体造型像航天员，是一位来自未来的冰雪运动专家，寓意现代科技和冰雪运动的结合。
+                            冰墩墩抛弃了传统元素，充满未来感、时代感、速度感。</p>
+                    </div>
+                </section>
+
+                <div class="row tm-margin-b-ll">
+                    <article class="col-12 col-sm-12 col-md-4 col-lg-4 mb-md-0 mb-5">
+                        <div class="text-center tm-margin-b-30"><img src="src/img/xueche.png" width="180" height="180"></img></div>
+                        <header class="tm-margin-b-30"><h3 class="tm-blue-text tm-h3">雪车</h3></header>
+                        <p>雪车也称“有舵雪橇”，是一种集体乘坐雪车，是乘坐可操纵方向的雪橇在冰道上滑行的运动项目。最理想的天气是0℃或低于0℃的晴天。</p>
+                    </article>
+                    <article class="col-12 col-sm-12 col-md-4 col-lg-4 mb-md-0 mb-5">
+                        <div class="text-center tm-margin-b-30"><img src="src/img/danban.png" width="180" height="180"></img></div>
+                        <header class="tm-margin-b-30"><h3 class="tm-blue-text tm-h3">单板滑雪</h3></header>
+                        <p>单板滑雪是一项以一块滑雪板为工具，在规定的山坡线路上快速回转滑降，或在特设的“U”形场地内凭借滑坡起跳，在空中完成各种高难度动作的雪上竞技项目。</p>
+                    </article>
+                    <article class="col-12 col-sm-12 col-md-4 col-lg-4 mb-md-0 mb-5">
+                        <div class="text-center tm-margin-b-30"><img src="src/img/bingqiu.png" width="180" height="180"></img></div>
+                        <header class="tm-margin-b-30"><h3 class="tm-blue-text tm-h3">冰球</h3></header>
+                        <p>冰球运动（Ice Hockey）是以冰刀和冰球杆为工具在冰上进行的一种相互对抗的集体性竞技运动，由男子和女子两个小项组成，在国际体育分类学上属独立的冬季运动项目。</p>
+                    </article>
+                </div>
+                            
+            </div>
+
+        </div>
+        
+        <!-- load JS files -->
+        <script src="js/jquery-1.11.3.min.js"></script>         <!-- jQuery (https://jquery.com/download/) -->
+        <script src="js/popper.min.js"></script>                <!-- Popper (https://popper.js.org/) -->
+        <script src="js/bootstrap.min.js"></script>             <!-- Bootstrap (https://getbootstrap.com/) -->
+        <script>     
+       
+            $(document).ready(function(){
+                $('.tm-current-year').text(new Date().getFullYear());
+
+            });
+
+        </script>
+    <div id="Carousel">
+        <el-carousel indicator-position="outside" type="card" :loop="true" :autoplay="true" :interval="2000" height="350px">
+            <el-carousel-item v-for="url in imgs" :key="url">
+                <el-image
+                        style="width: 100%;height: 100%;"
+                        :src="url"
+                        :fit="fit">
+                </el-image>
+            </el-carousel-item>
+        </el-carousel>
+    </div>
 </body>
-<script >
+<script>
+    Vue.createApp({}).use(ElementPlus).mount('#dazs')
     Vue.createApp({
+        el: '#app',
         data() {
             return {
-                items:[
-                    {
-                        "bronze": "13",
-                        "rank": "1",
-                        "count": "37",
-                        "silver": "8",
-                        "countryname": "挪威",
-                        "gold": "16",
-                        "countryid": "NOR"
-                    },
-                    {
-                        "bronze": "5",
-                        "rank": "2",
-                        "count": "27",
-                        "silver": "10",
-                        "countryname": "德国",
-                        "gold": "12",
-                        "countryid": "GER"
-                    },
-                    {
-                        "bronze": "2",
-                        "rank": "3",
-                        "count": "15",
-                        "silver": "4",
-                        "countryname": "中国",
-                        "gold": "9",
-                        "countryid": "CHN"
-                    },
-                    {
-                        "bronze": "7",
-                        "rank": "4",
-                        "count": "25",
-                        "silver": "10",
-                        "countryname": "美国",
-                        "gold": "8",
-                        "countryid": "USA"
-                    },
-                    {
-                        "bronze": "5",
-                        "rank": "5",
-                        "count": "18",
-                        "silver": "5",
-                        "countryname": "瑞典",
-                        "gold": "8",
-                        "countryid": "SWE"
-                    },
-                    {
-                        "bronze": "4",
-                        "rank": "6",
-                        "count": "17",
-                        "silver": "5",
-                        "countryname": "荷兰",
-                        "gold": "8",
-                        "countryid": "NED"
-                    },
-                    {
-                        "bronze": "4",
-                        "rank": "7",
-                        "count": "18",
-                        "silver": "7",
-                        "countryname": "奥地利",
-                        "gold": "7",
-                        "countryid": "AUT"
-                    },
-                    {
-                        "bronze": "5",
-                        "rank": "8",
-                        "count": "14",
-                        "silver": "2",
-                        "countryname": "瑞士",
-                        "gold": "7",
-                        "countryid": "SUI"
-                    },
-                    {
-                        "bronze": "14",
-                        "rank": "9",
-                        "count": "32",
-                        "silver": "12",
-                        "countryname": "俄罗斯奥运队",
-                        "gold": "6",
-                        "countryid": "ROC"
-                    },
-                    {
-                        "bronze": "2",
-                        "rank": "10",
-                        "count": "14",
-                        "silver": "7",
-                        "countryname": "法国",
-                        "gold": "5",
-                        "countryid": "FRA"
-                    },
-                    {
-                        "bronze": "14",
-                        "rank": "11",
-                        "count": "26",
-                        "silver": "8",
-                        "countryname": "加拿大",
-                        "gold": "4",
-                        "countryid": "CAN"
-                    },
-                    {
-                        "bronze": "9",
-                        "rank": "12",
-                        "count": "18",
-                        "silver": "6",
-                        "countryname": "日本",
-                        "gold": "3",
-                        "countryid": "JPN"
-                    },
-                    {
-                        "bronze": "8",
-                        "rank": "13",
-                        "count": "17",
-                        "silver": "7",
-                        "countryname": "意大利",
-                        "gold": "2",
-                        "countryid": "ITA"
-                    },
-                    {
-                        "bronze": "2",
-                        "rank": "14",
-                        "count": "9",
-                        "silver": "5",
-                        "countryname": "韩国",
-                        "gold": "2",
-                        "countryid": "KOR"
-                    },
-                    {
-                        "bronze": "2",
-                        "rank": "15",
-                        "count": "7",
-                        "silver": "3",
-                        "countryname": "斯洛文尼亚",
-                        "gold": "2",
-                        "countryid": "SLO"
-                    },
-                    {
-                        "bronze": "4",
-                        "rank": "16",
-                        "count": "8",
-                        "silver": "2",
-                        "countryname": "芬兰",
-                        "gold": "2",
-                        "countryid": "FIN"
-                    },
-                    {
-                        "bronze": "0",
-                        "rank": "17",
-                        "count": "3",
-                        "silver": "1",
-                        "countryname": "新西兰",
-                        "gold": "2",
-                        "countryid": "NZL"
-                    },
-                    {
-                        "bronze": "1",
-                        "rank": "18",
-                        "count": "4",
-                        "silver": "2",
-                        "countryname": "澳大利亚",
-                        "gold": "1",
-                        "countryid": "AUS"
-                    },
-                    {
-                        "bronze": "0",
-                        "rank": "19",
-                        "count": "2",
-                        "silver": "1",
-                        "countryname": "英国",
-                        "gold": "1",
-                        "countryid": "GBR"
-                    },
-                    {
-                        "bronze": "2",
-                        "rank": "20",
-                        "count": "3",
-                        "silver": "0",
-                        "countryname": "匈牙利",
-                        "gold": "1",
-                        "countryid": "HUN"
-                    },
-                    {
-                        "bronze": "1",
-                        "rank": "21",
-                        "count": "2",
-                        "silver": "0",
-                        "countryname": "捷克",
-                        "gold": "1",
-                        "countryid": "CZE"
-                    },
-                    {
-                        "bronze": "1",
-                        "rank": "21",
-                        "count": "2",
-                        "silver": "0",
-                        "countryname": "斯洛伐克",
-                        "gold": "1",
-                        "countryid": "SVK"
-                    },
-                    {
-                        "bronze": "1",
-                        "rank": "21",
-                        "count": "2",
-                        "silver": "0",
-                        "countryname": "比利时",
-                        "gold": "1",
-                        "countryid": "BEL"
-                    },
-                    {
-                        "bronze": "0",
-                        "rank": "24",
-                        "count": "2",
-                        "silver": "2",
-                        "countryname": "白俄罗斯",
-                        "gold": "0",
-                        "countryid": "BLR"
-                    },
-                    {
-                        "bronze": "0",
-                        "rank": "25",
-                        "count": "1",
-                        "silver": "1",
-                        "countryname": "西班牙",
-                        "gold": "0",
-                        "countryid": "ESP"
-                    },
-                    {
-                        "bronze": "0",
-                        "rank": "25",
-                        "count": "1",
-                        "silver": "1",
-                        "countryname": "乌克兰",
-                        "gold": "0",
-                        "countryid": "UKR"
-                    },
-                    {
-                        "bronze": "1",
-                        "rank": "27",
-                        "count": "1",
-                        "silver": "0",
-                        "countryname": "波兰",
-                        "gold": "0",
-                        "countryid": "POL"
-                    },
-                    {
-                        "bronze": "1",
-                        "rank": "27",
-                        "count": "1",
-                        "silver": "0",
-                        "countryname": "拉脱维亚",
-                        "gold": "0",
-                        "countryid": "LAT"
-                    },
-                    {
-                        "bronze": "1",
-                        "rank": "27",
-                        "count": "1",
-                        "silver": "0",
-                        "countryname": "爱沙尼亚",
-                        "gold": "0",
-                        "countryid": "EST"
-                    }
-                ]
+                fit: 'cover',
+                imgs: ['src/img/pic1.jpeg','src/img/pic2.webp','src/img/pic3.png','src/img/pic4.png','src/img/pic5.png'],
+            };
+            screenWidth :0
+        },
+        methods:{
+            setSize() {
+                // 通过浏览器宽度(图片宽度)计算高度
+                this.bannerHeight = 400 / 1920 * this.screenWidth;
+            },
+        },
+        mounted() {
+            // 首次加载时,需要调用一次
+            this.screenWidth =  window.innerWidth;
+            this.setSize();
+            // 窗口大小发生改变时,调用一次
+            window.onresize = () =>{
+                this.screenWidth =  window.innerWidth;
+                this.setSize();
             }
         }
-    }).use(ElementPlus).mount('#jpzb')
+    }).use(ElementPlus).mount('#Carousel')
 </script>
+<style >
+    .el-carousel__item h3 {
+        color: #475669;
+        font-size: 14px;
+        opacity: 0.75;
+        line-height: 200px;
+        margin: 0;
+        text-align: center;
+    }
+
+    .el-carousel__item:nth-child(2n) {
+        background-color: #99a9bf;
+    }
+
+    .el-carousel__item:nth-child(2n + 1) {
+        background-color: #d3dce6;
+    }
+    .headerBg #snowflake .snow {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background: url(src/img/snowflake.png) no-repeat;
+        background-size: 100% 100%;
+        -webkit-animation: mX 2s cubic-bezier(.36,0,.64,1) -1s infinite alternate,mY 2s cubic-bezier(.36,0,.64,1) 0s infinite alternate;
+        animation: mX 2s cubic-bezier(.36,0,.64,1) -1s infinite alternate,mY 2s cubic-bezier(.36,0,.64,1) 0s infinite alternate;
+    }
+    .headerBg #snowflake {
+        position: absolute;
+        top: 190px;
+        left: 52%;
+        width: 1691px;
+        height: 735px;
+        margin-left: -845.5px;
+    }
+    /*img{*/
+    /*    !*设置图片宽度和浏览器宽度一致*!*/
+    /*    width:100%;*/
+    /*    height:inherit;*/
+    /*}*/
+</style>
 </html>
