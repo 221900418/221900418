@@ -3652,8 +3652,8 @@
       },
       table: {
         emptyText: "No Data",
-        confirmFilter: "Confirm",
-        resetFilter: "Reset",
+        confirmFilter: "筛选",
+        resetFilter: "重置",
         clearFilter: "All",
         sumText: "Sum"
       },
